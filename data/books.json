@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "The Hobbit",
+    "price": 78,
+    "stock": 15
+  },
+  {
+    "id": 2,
+    "name": "Sapiens: A Brief History of Humankind",
+    "price": 94,
+    "stock": 8
+  },
+  {
+    "id": 3,
+    "name": "1984",
+    "price": 65,
+    "stock": 22
+  },
+  {
+    "id": 4,
+    "name": "The Little Prince",
+    "price": 49,
+    "stock": 30
+  },
+  {
+    "id": 5,
+    "name": "Rich Dad Poor Dad",
+    "price": 88,
+    "stock": 12
+  },
+  {
+    "id": 6,
+    "name": "The Da Vinci Code",
+    "price": 74,
+    "stock": 5
+  },
+  {
+    "id": 7,
+    "name": "Thinking, Fast and Slow",
+    "price": 110,
+    "stock": 7
+  },
+  {
+    "id": 8,
+    "name": "The Alchemist",
+    "price": 59,
+    "stock": 18
+  },
+  {
+    "id": 9,
+    "name": "Catch-22",
+    "price": 82,
+    "stock": 4
+  },
+  {
+    "id": 10,
+    "name": "Man's Search for Meaning",
+    "price": 68,
+    "stock": 25
+  }
+]
