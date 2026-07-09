@@ -9,13 +9,13 @@
     "id": 2,
     "name": "Sapiens: A Brief History of Humankind",
     "price": 94,
-    "stock": 8
+    "stock": 0
   },
   {
     "id": 3,
     "name": "1984",
     "price": 65,
-    "stock": 22
+    "stock": 0
   },
   {
     "id": 4,
@@ -27,7 +27,7 @@
     "id": 5,
     "name": "Rich Dad Poor Dad",
     "price": 88,
-    "stock": 12
+    "stock": 0
   },
   {
     "id": 6,
