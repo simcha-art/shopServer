@@ -2,6 +2,7 @@ import express from "express";
 import env from "dotenv";
 import productsRouter from "./routers/products.js";
 import cartRouter from "./routers/cart.js"
+import accountRouter from "./routers/account.js"
 import {fail, success} from "./services/responses.js"
 
 
@@ -12,6 +13,7 @@ const PORT = process.env.PORT
 
 server.use("/products", productsRouter)
 server.use("/cart", cartRouter)
+server.use("/account", accountRouter)
 
 server.get("/", (req, res) => {
     try {
