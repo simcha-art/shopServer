@@ -1,15 +1,15 @@
 import { custom } from "zod";
 import { readBooksFile, readCustomersFile } from "./io.js";
 
-export async function findProduct(productId) {
-    const allProducts = await readBooksFile();
+export async function findProduct(allProducts, productId) {
     const product = allProducts.find(
-        (product) => product.productId === productId,
+        (product) => +product.id === +productId,
     );
+    return product
 }
-export async function findCustomer(customerId) {
-    const customers = await readCustomersFile();
+export function findCustomer(customers, customerId ) {
     const customer = customers.find(
-        (customer) => customer.customerId === customerId,
+        (customer) => +customer.customerId === +customerId,
     );
+    return customer
 }
