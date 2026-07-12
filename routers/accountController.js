@@ -9,6 +9,8 @@ import { fail, success } from "../services/responses.js";
 export async function getBalance(req, res) {
     try {
         const { customerId } = req.query;
+        if (!customerId) return res.status(400).send(fail("customer id is missing"))
+
         const allCustomers = await readCustomersFile();
         const customer = findCustomer(allCustomers, customerId);
         if (!customer)

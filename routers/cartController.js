@@ -22,6 +22,10 @@ export async function addItemToCart(req, res) {
             return res.status(400).send(fail(JSON.parse(validItem.error)));
         }
         const { productId, customerId, quantity } = validItem.data;
+        if (!customerId) return res.status(400).send(fail("customer id is missing"))
+        if (!productId) return res.status(400).send(fail("product id is missing"))
+        if (!quantity) return res.status(400).send(fail("quantity is missing"))
+
 
         //check if proudct Id and customer Id exist
         const allProducts = await readBooksFile();
@@ -71,6 +75,7 @@ export async function addItemToCart(req, res) {
 export async function getCart(req, res) {
     try {
         const { customerId } = req.query;
+        if (!customerId) return res.status(400).send(fail("customer id is missing"))
         const customers = await readCustomersFile();
         const customer = findCustomer(customers, customerId);
         console.log(customer);
@@ -89,7 +94,9 @@ export async function removeItemFromCart(req, res) {
     try {
         // extract data
         const productId = +req.params.productId;
-        const customerId = +req.query.customerId;
+        const customerId = +req.body.customerId;
+        if (!customerId) return res.status(400).send(fail("customer id is missing"))
+
 
         // find the customer fo the cart
         const allCustomers = await readCustomersFile();
