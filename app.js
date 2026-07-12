@@ -3,6 +3,7 @@ import env from "dotenv";
 import productsRouter from "./routers/products.js";
 import cartRouter from "./routers/cart.js"
 import accountRouter from "./routers/account.js"
+import ordersRouter from "./routers/orders.js"
 import {fail, success} from "./services/responses.js"
 
 
@@ -10,10 +11,12 @@ const server = express()
 env.config()
 const PORT = process.env.PORT
 
+server.use(express.json())
 
 server.use("/products", productsRouter)
 server.use("/cart", cartRouter)
 server.use("/account", accountRouter)
+server.use("/orders", ordersRouter)
 
 server.get("/", (req, res) => {
     try {
