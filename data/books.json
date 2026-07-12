@@ -3,7 +3,7 @@
     "id": 1,
     "name": "The Hobbit",
     "price": 78,
-    "stock": 15
+    "stock": 3
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "id": 4,
     "name": "The Little Prince",
     "price": 49,
-    "stock": 30
+    "stock": 27
   },
   {
     "id": 5,

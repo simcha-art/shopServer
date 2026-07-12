@@ -1,7 +1,7 @@
 import { custom } from "zod";
 import { readBooksFile, readCustomersFile } from "./io.js";
 
-export async function findProduct(allProducts, productId) {
+export function findProduct(allProducts, productId) {
     const product = allProducts.find(
         (product) => +product.id === +productId,
     );

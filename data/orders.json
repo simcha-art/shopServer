@@ -79,58 +79,100 @@
   },
   {
     "id": 6,
-    "customerId": "1",
+    "customerId": 1,
     "items": [
       {
-        "productId": 1,
-        "quantity": 2
+        "productId": 2,
+        "quantity": 1
       },
       {
-        "productId": 4,
-        "quantity": 1
+        "productId": 1,
+        "quantity": 4
       }
     ],
     "total": null,
-    "createdAt": "2026-07-12T01:42:52.344Z"
+    "createdAt": "2026-07-12T06:14:25.002Z"
   },
   {
     "id": 7,
     "customerId": 2,
     "items": [
       {
-        "productId": 5,
-        "quantity": 9
-      }
-    ],
-    "total": null,
-    "createdAt": "2026-07-12T01:47:00.002Z"
-  },
-  {
-    "id": 8,
-    "customerId": 3,
-    "items": [
-      {
-        "productId": 7,
-        "quantity": 1
-      }
-    ],
-    "total": null,
-    "createdAt": "2026-07-12T01:47:22.636Z"
-  },
-  {
-    "id": 9,
-    "customerId": 4,
-    "items": [
-      {
-        "productId": 3,
+        "productId": 2,
         "quantity": 1
       },
       {
-        "productId": 10,
-        "quantity": 3
+        "productId": 1,
+        "quantity": 4
       }
     ],
     "total": null,
-    "createdAt": "2026-07-12T01:48:14.232Z"
+    "createdAt": "2026-07-12T06:17:12.168Z"
+  },
+  {
+    "id": 8,
+    "customerId": 5,
+    "items": [
+      {
+        "productId": 2,
+        "quantity": 1
+      }
+    ],
+    "total": null,
+    "createdAt": "2026-07-12T06:19:57.769Z"
+  },
+  {
+    "id": 9,
+    "customerId": 1,
+    "items": [
+      {
+        "productId": 1,
+        "quantity": 4,
+        "price": 78
+      },
+      {
+        "productId": 4,
+        "quantity": 1,
+        "price": 49
+      }
+    ],
+    "total": 361,
+    "createdAt": "2026-07-12T06:30:38.182Z"
+  },
+  {
+    "id": 10,
+    "customerId": 1,
+    "items": [
+      {
+        "productId": 1,
+        "quantity": 4,
+        "price": 78
+      },
+      {
+        "productId": 4,
+        "quantity": 1,
+        "price": 49
+      }
+    ],
+    "total": 361,
+    "createdAt": "2026-07-12T06:35:35.208Z"
+  },
+  {
+    "id": 11,
+    "customerId": 1,
+    "items": [
+      {
+        "productId": 1,
+        "quantity": 4,
+        "price": 78
+      },
+      {
+        "productId": 4,
+        "quantity": 1,
+        "price": 49
+      }
+    ],
+    "total": 361,
+    "createdAt": "2026-07-12T06:36:50.004Z"
   }
 ]

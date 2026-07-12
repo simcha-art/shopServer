@@ -57,11 +57,11 @@ export async function checkout(req, res) {
         for (const product of cart) {
             const { productId, quantity } = product;
             const existProduct = findProduct(allProducts, productId);
-            if (!existProduct)
+            if (!existProduct) {
                 return res
                     .status(404)
                     .send(fail(`product ${productId} isn't exist anymore`));
-            else if (existProduct.stock < product.quantity)
+            } else if (existProduct.stock < product.quantity) {
                 return res
                     .status(404)
                     .send(
@@ -69,13 +69,14 @@ export async function checkout(req, res) {
                             `stock has less then ${quantity} from product ${productId}`,
                         ),
                     );
+            }
             orderItems.push({ productId, quantity, price: existProduct.price });
             existProduct.stock -= quantity;
         }
 
         // is enough money
         const total = orderItems.reduce(
-            (acc, product) => acc + (product.price * product.quantity),
+            (acc, product) => acc + product.price * product.quantity,
             0,
         );
         if (customer.balance < total)
@@ -85,8 +86,7 @@ export async function checkout(req, res) {
                     fail(`customer ${customerId} does not have enough money`),
                 );
         customer.balance = customer.balance - total;
-        customer.cart = []
-
+        customer.cart = [];
 
         // make a new order
         const allOrders = await readOrdersFile();
@@ -106,7 +106,6 @@ export async function checkout(req, res) {
             writeOrdersFile(allOrders),
         ]);
 
-        
         res.send(
             success(
                 `order created successfully for customer ${customerId}, order id: ${newId}`,
@@ -117,4 +116,3 @@ export async function checkout(req, res) {
         res.status(500).send(fail("Internal Server Error"));
     }
 }
-
